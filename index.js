@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 // incluyo funciones en mongoDb.js
-const { connectToMongoDB, disconnectToMongoDB} = require('./src/mongoDB')
+const { connectToMongoDB, disconnectToMongoDB} = require('./bd/mongoDB')
 
 const bodyParser = require('body-parser');
 
