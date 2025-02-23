@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 // incluyo funciones en mongoDb.js
 const { connectToMongoDB, disconnectToMongoDB} = require('./bd/mongoDB')
 
@@ -60,7 +60,7 @@ app.get('/usuarios/nombre/:nombre', async (req, res) => {
 
 app.post('/usuarios', async (req, res) => {
     const nuevoUsuariosRegistrado = req.body
-    console.log(nuevoUsuariosRegistrado)
+    console.log('Datos recibidos en el backend:', nuevoUsuariosRegistrado);
     if (!nuevoUsuariosRegistrado) {
         res.status(400).send('Error en el formato de los datos del usuario')
     }
